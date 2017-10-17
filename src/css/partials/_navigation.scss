@@ -1,0 +1,45 @@
+.logo {
+  height: 100px;
+  margin: 3em auto 2em;
+  display: block;
+}
+
+.nav {
+  list-style-type: none;
+
+  &-item {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    &-target {
+      display: inline-block;
+      position: relative;
+      font: normal 1.6em/1.28em $font-title;
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.125s ease;
+
+      &:hover, :focus {
+        color: $color5;
+      }
+
+      &.is-active {
+        color: $color4;
+        cursor: default;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 40%;
+          bottom: 0;
+          left: 10%;
+          background: $color2;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+}

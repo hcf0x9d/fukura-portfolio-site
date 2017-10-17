@@ -1,0 +1,34 @@
+{
+  "name": "fukura-portfolio-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "animated": "latest",
+    "bower": "^1.8.2",
+    "create-react-app": "1.4.1",
+    "gulp": "^3.9.1",
+    "jscs": "^3.0.7",
+    "node-sass-chokidar": "^0.0.3",
+    "react": "latest",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "1.0.14",
+    "webpack": "^3.7.1",
+    "yarn": "^1.2.0"
+  },
+  "scripts": {
+    "watch-css": "npm run build-css && node-sass-chokidar src/css/ -o src/css/ --watch --recursive",
+    "start": "react-scripts start && watch-css",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}

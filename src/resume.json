@@ -1,0 +1,56 @@
+{
+  "work": [
+    {
+      "id": 1,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 2,
+      "name": "Music Prodigy"
+    },
+    {
+      "id": 3,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 4,
+      "name": "Averetek"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 2,
+      "name": "Music Prodigy"
+    },
+    {
+      "id": 3,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 4,
+      "name": "Averetek"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 2,
+      "name": "Music Prodigy"
+    },
+    {
+      "id": 3,
+      "name": "Capital One Investing"
+    },
+    {
+      "id": 4,
+      "name": "Averetek"
+    }
+  ]
+}
