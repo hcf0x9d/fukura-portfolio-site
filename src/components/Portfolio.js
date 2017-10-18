@@ -21,14 +21,14 @@ class Portfolio extends Component {
     render () {
 
         return (
-            <article>
+            <article className="page-article">
                 <section className="col-sm-6">
                     <header>
-                        <h1 className="pageTitle">
-                            Gallery or something?
+                        <h1 className="type-title">
+                            Portfolio
                         </h1>
-                        <h2>
-                            A developer with an eye for design.  Or a designer who likes to code. Either way.
+                        <h2 className="type-subtitle">
+                            Some of my recent works
                         </h2>
                     </header>
                     <GalleryList />

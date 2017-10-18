@@ -1,0 +1,37 @@
+/**
+ * Education Section
+ *
+ * Each item in the education history is listed as an <li> within an ordered list.
+ *
+ * @markup
+   <section className="education-section">
+      <h3 className="">Education</h3>
+      <ol className="education">
+
+        <li className="education-item">
+
+          <h3 className="type-subheadline">{ cert }</h3>;
+          <h4 className="type-subheadline mod-secondary">{ education.institution }</h4>
+
+        </li>
+        ...
+
+      </ol>
+    </section>
+ */
+
+// List of education items
+.education {
+  position: relative;
+  margin-top: 1em;
+
+  &-section {
+    margin-top: 5em;
+  }
+
+  &-item {
+    list-style-type: none;
+    margin-bottom: 2em;
+  }
+
+}

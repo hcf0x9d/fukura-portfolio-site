@@ -4,7 +4,7 @@ const Home = () => {
 
     return (
         <section>
-            <article className="col-sm-4">
+            <article className="col-sm-4 page-article">
                 <header>
                     <h1 className="type-title">
                         I'm Jason Fukura
@@ -29,7 +29,9 @@ const Home = () => {
                     <a className="link" href="mailto:jason@jasonfukura.com">jason@jasonfukura.com</a>
                 </p>
             </article>
-            <aside className="col-sm-8" />
+            <aside className="col-sm-8 aside-image">
+                <span className="image" style={{ backgroundImage : "url(http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg)", }}/>
+            </aside>
         </section>
     );
 

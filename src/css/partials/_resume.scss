@@ -35,9 +35,11 @@
 .experience {
   list-style-type: none;
   position: relative;
+  margin-top: 1em;
 
   &-article {
-    display: flex;
+    margin-bottom: 5em;
+    display: block;
   }
 
   &-header {

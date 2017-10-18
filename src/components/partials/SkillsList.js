@@ -5,8 +5,8 @@ const SkillsList = ( { skills, } ) => {
     const items = skills.map( ( skill ) => {
 
         return (
-            <li key={ skill.id } className="">
-                { skill.name }
+            <li key={ skill.id } className="skill">
+                <img className="skill-icon" src={ skill.icon } alt={ skill.name }/>
             </li>
         )
 
@@ -14,10 +14,10 @@ const SkillsList = ( { skills, } ) => {
 
     return (
         <section>
-            <h3 className="">
+            <h3 className="type-headline">
                 Languages
             </h3>
-            <ol>
+            <ol className="skills">
                 { items }
             </ol>
         </section>

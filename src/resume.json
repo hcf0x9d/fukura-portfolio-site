@@ -48,19 +48,38 @@
   "skills": [
     {
       "id": 1,
-      "name": "Capital One Investing"
-    },
-    {
-      "id": 2,
-      "name": "Music Prodigy"
+      "name": "Python",
+      "icon": "/img/python.svg"
     },
     {
       "id": 3,
-      "name": "Capital One Investing"
+      "name": "JavaScript",
+      "icon": "/img/javascript.svg"
     },
     {
       "id": 4,
-      "name": "Averetek"
+      "name": "HTML",
+      "icon": "/img/html.svg"
+    },
+    {
+      "id": 5,
+      "name": "CSS",
+      "icon": "/img/css3.svg"
+    },
+    {
+      "id": 6,
+      "name": "Sass",
+      "icon": "/img/sass.svg"
+    },
+    {
+      "id": 7,
+      "name": "Node.js",
+      "icon": "/img/node.svg"
+    },
+    {
+      "id": 8,
+      "name": "PHP",
+      "icon": "/img/php.svg"
     }
   ]
 }

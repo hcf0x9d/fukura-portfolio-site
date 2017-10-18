@@ -18,9 +18,9 @@ class App extends Component {
                     <Navigation />
                 </nav>
                 <main className="col-md-10 col-sm-9">
-                    <Route exact path="/" component={PageShell( Home )} />
-                    <Route path="/resume" component={PageShell( Resume )}/>
-                    <Route path="/portfolio" component={PageShell( Portfolio )}/>
+                    <Route exact path="/" component={ Home} />
+                    <Route path="/resume" component={ Resume }/>
+                    <Route path="/portfolio" component={ Portfolio }/>
                 </main>
             </div>
         );

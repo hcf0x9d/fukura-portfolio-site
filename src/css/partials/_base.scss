@@ -8,12 +8,17 @@ html {
   background: $color0;
   color: $color4;
   font-size: 100%;
+  min-height: 100vh;
 }
 
 body {
   font: normal 1em/1.28em $font-body;
+  min-height: 100vh;
 }
 
+.full-height {
+  min-height: 100vh;
+}
 
 
 // Boilerplate Crap

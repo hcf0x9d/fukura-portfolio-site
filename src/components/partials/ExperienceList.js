@@ -16,9 +16,9 @@ const ExperienceList = ( { work, } ) => {
     return (
 
         <section>
-            <h3>
+            <h2 className="type-headline mod-section">
                 Recent Experience
-            </h3>
+            </h2>
             <ol className="experiences">
                 { items }
             </ol>

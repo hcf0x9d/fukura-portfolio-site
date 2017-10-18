@@ -9,10 +9,19 @@
   }
 
   &-headline {
+    font: normal 1.6em/1.28em $font-title;
 
+    &.mod-section {
+      margin-top: 3em;
+    }
   }
 
   &-subheadline {
+    font: normal 1.25em/1.28em $font-title;
+
+    &.mod-secondary {
+      font-size: 0.875em;
+    }
 
   }
 

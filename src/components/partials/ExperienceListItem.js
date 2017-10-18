@@ -5,12 +5,12 @@ const ExperienceListItem = ( { item, } ) => {
     return (
 
         <li key={ item.id } className="experience">
-            <article className="experience-article">
-                <header className="experience-header">
-                    <h2 className="headline">{ item.name }</h2>
-                    <h3 className="subheadline">{ item.title }</h3>
+            <article className="experience-article row">
+                <header className="experience-header col-sm-4">
+                    <h3 className="type-subheadline">{ item.name }</h3>
+                    <h4 className="type-subheadline mod-secondary">{ item.title }</h4>
                 </header>
-                <div className="experience-body">
+                <div className="experience-body col-sm-8">
                     <p className="mod-no-margin">{ item.summary }</p>
                 </div>
             </article>

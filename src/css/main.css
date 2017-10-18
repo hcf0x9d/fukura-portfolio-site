@@ -699,6 +699,16 @@ img {
 .type-subtitle {
   font: normal 1.6em/1.28em "Pathway Gothic One", sans-serif; }
 
+.type-headline {
+  font: normal 1.6em/1.28em "Pathway Gothic One", sans-serif; }
+  .type-headline.mod-section {
+    margin-top: 3em; }
+
+.type-subheadline {
+  font: normal 1.25em/1.28em "Pathway Gothic One", sans-serif; }
+  .type-subheadline.mod-secondary {
+    font-size: 0.875em; }
+
 p {
   margin-top: 1em; }
   p.mod-no-margin {
@@ -730,20 +740,25 @@ p {
         .nav-item-target.is-active::after {
           content: "";
           position: absolute;
-          width: 120%;
-          height: 40%;
+          width: 100%;
+          height: 10%;
           bottom: 0;
-          left: 10%;
-          background: #f3f9d2;
+          left: 0;
+          background: #92b4a7;
           z-index: -1; }
 
 html {
   background: white;
   color: #2f2f2f;
-  font-size: 100%; }
+  font-size: 100%;
+  min-height: 100vh; }
 
 body {
-  font: normal 1em/1.28em "Cardo", serif; }
+  font: normal 1em/1.28em "Cardo", serif;
+  min-height: 100vh; }
+
+.full-height {
+  min-height: 100vh; }
 
 .SlideIn-appear {
   transform: translateY(15px);
@@ -834,6 +849,83 @@ body {
 
 .experience {
   list-style-type: none;
-  position: relative; }
+  position: relative;
+  margin-top: 1em; }
   .experience-article {
-    display: flex; }
+    margin-bottom: 5em;
+    display: block; }
+
+/**
+ * Education Section
+ *
+ * Each item in the education history is listed as an <li> within an ordered list.
+ *
+ * @markup
+   <section className="education-section">
+      <h3 className="">Education</h3>
+      <ol className="education">
+
+        <li className="education-item">
+
+          <h3 className="type-subheadline">{ cert }</h3>;
+          <h4 className="type-subheadline mod-secondary">{ education.institution }</h4>
+
+        </li>
+        ...
+
+      </ol>
+    </section>
+ */
+.education {
+  position: relative;
+  margin-top: 1em; }
+  .education-section {
+    margin-top: 5em; }
+  .education-item {
+    list-style-type: none;
+    margin-bottom: 2em; }
+
+/**
+ * Skills/Language Section
+ *
+ * Each item in the skills section is listed as an <li> within an ordered list.  For now, this is geared towards being
+ * a list of languages that I am proficient in.
+ *
+ * @markup
+   <section className="skills-section">
+      <h3 className="">Languages</h3>
+      <ol className="skills">
+
+        <li className="skill">
+
+          <h3 className="type-subheadline">{ cert }</h3>;
+          <h4 className="type-subheadline mod-secondary">{ education.institution }</h4>
+
+        </li>
+        ...
+
+      </ol>
+    </section>
+ */
+.skills {
+  position: relative;
+  margin-top: 1em;
+  list-style-type: none; }
+  .skills .skill {
+    margin-top: 5em;
+    display: inline-block;
+    margin: 0; }
+    .skills .skill-icon {
+      width: 3em; }
+
+.page-article {
+  margin-top: 2em; }
+
+.aside-image .image {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  background-position: center center; }

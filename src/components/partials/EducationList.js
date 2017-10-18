@@ -6,18 +6,18 @@ const EducationList = ( { education, } ) => {
 
         return (
 
-            <li key={ education.id } className="">
+            <li key={ education.id } className="education-item">
                 {
 
                     // Create the list of certificates from the institution
                     education.certificates.map( ( cert ) => {
 
-                        return <h3 className="subheadline">{ cert }</h3>;
+                        return <h3 key={ cert } className="type-subheadline">{ cert }</h3>;
 
                     } )
 
                 }
-                <h4 className="">{ education.institution }</h4>
+                <h4 className="type-subheadline mod-secondary">{ education.institution }</h4>
             </li>
 
         )
@@ -25,11 +25,11 @@ const EducationList = ( { education, } ) => {
     } );
 
     return (
-        <section>
-            <h3 className="">
+        <section className="education-section">
+            <h3 className="type-headline">
                 Education
             </h3>
-            <ol>
+            <ol className="education">
                 { items }
             </ol>
         </section>

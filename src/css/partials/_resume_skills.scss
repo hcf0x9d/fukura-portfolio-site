@@ -1,0 +1,41 @@
+/**
+ * Skills/Language Section
+ *
+ * Each item in the skills section is listed as an <li> within an ordered list.  For now, this is geared towards being
+ * a list of languages that I am proficient in.
+ *
+ * @markup
+   <section className="skills-section">
+      <h3 className="">Languages</h3>
+      <ol className="skills">
+
+        <li className="skill">
+
+          <h3 className="type-subheadline">{ cert }</h3>;
+          <h4 className="type-subheadline mod-secondary">{ education.institution }</h4>
+
+        </li>
+        ...
+
+      </ol>
+    </section>
+ */
+
+// List of education items
+.skills {
+  position: relative;
+  margin-top: 1em;
+  list-style-type: none;
+
+  & .skill {
+    margin-top: 5em;
+    display: inline-block;
+    margin: 0;
+
+    &-icon {
+      width: 3em;
+    }
+
+  }
+
+}

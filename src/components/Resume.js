@@ -25,7 +25,7 @@ class Resume extends Component {
     render () {
 
         return (
-            <article>
+            <article className="page-article">
                 <section className="col-sm-8">
                     <header>
                         <h1 className="type-title">
