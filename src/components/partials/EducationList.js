@@ -7,7 +7,17 @@ const EducationList = ( { education, } ) => {
         return (
 
             <li key={ education.id } className="">
-                { education.name }
+                {
+
+                    // Create the list of certificates from the institution
+                    education.certificates.map( ( cert ) => {
+
+                        return <h3 className="subheadline">{ cert }</h3>;
+
+                    } )
+
+                }
+                <h4 className="">{ education.institution }</h4>
             </li>
 
         )
@@ -17,7 +27,7 @@ const EducationList = ( { education, } ) => {
     return (
         <section>
             <h3 className="">
-                Languages
+                Education
             </h3>
             <ol>
                 { items }

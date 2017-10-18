@@ -2,37 +2,47 @@
   "work": [
     {
       "id": 1,
-      "name": "Capital One Investing"
+      "name": "Capital One Investing",
+      "title": "Design Technologist",
+      "dates": "2016-2017",
+      "skills": ["UX", "JavaScript", "HTML", "Digital Accessibility"],
+      "summary": "As Design Technologist at Capital One Investing, I have created and maintained several javascript based applications. These applications are for internal, associate usage and incorporate tools like handlebars, angular.js and custom javascript and jQuery functions. During my time at Capital One, I have also developed several jQuery plugins, one of which extends the jQuery UI library. Along with this, I have been working to standardize development practices based on the MVC design pattern, Object Oriented Javascript, and the OOCSS patterns for CSS."
     },
     {
       "id": 2,
-      "name": "Music Prodigy"
+      "name": "Music Prodigy",
+      "title": "UX Designer & Developer",
+      "dates": "2015-2016",
+      "skills": ["UX", "JavaScript", "PHP", "RDB", "App Development"],
+      "summary": "Design for a user-centered app experience for mobile apps on iPhone, Android and iPad - as well as desktop OS. Take the designs generated and create an intuitive, interactive and enjoyable front-end experience. Along with this, I designed relational databases and worked heavily in PHP for the web application. I was also placed in charge of brand management, and maintaining the company website."
     },
     {
       "id": 3,
-      "name": "Capital One Investing"
+      "name": "Capital One Investing",
+      "title": "Web Developer (Contract)",
+      "dates": "2014-2015",
+      "skills": ["JavaScript", "Digital Accessibility", "HTML"],
+      "summary": "My first run with Capital One Investing was as a contractor for the Brand Creative team. I was hired to assist with building landing pages, HTML emails, and designing web campaigns. By the end of my contract, I was also given the opportunity to start prototyping solutions for internal web apps."
     },
     {
       "id": 4,
-      "name": "Averetek"
+      "name": "Averetek",
+      "title": "Creative Lead",
+      "dates": "2011-2014",
+      "skills": ["UX", "PHP", "HTML", ".NET", "XML", "Design", "Branding"],
+      "summary": "At averetek, I was the sole creative in a sea of developers. I managed everything from company website design, wireframing and designing assets for our clients, prototyping new tools and helping design the user experience for enterprise level B2B applications."
     }
   ],
   "education": [
     {
       "id": 1,
-      "name": "Capital One Investing"
+      "institution": "Udacity",
+      "certificates": ["Full-Stack Web Developer Nanodegree", "Front-End Web Developer Nanodegree"]
     },
     {
       "id": 2,
-      "name": "Music Prodigy"
-    },
-    {
-      "id": 3,
-      "name": "Capital One Investing"
-    },
-    {
-      "id": 4,
-      "name": "Averetek"
+      "institution": "Central Washington University",
+      "certificates": ["BA K-12 Instrumental & General Music Education"]
     }
   ],
   "skills": [

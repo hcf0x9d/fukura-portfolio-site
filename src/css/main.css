@@ -701,6 +701,8 @@ img {
 
 p {
   margin-top: 1em; }
+  p.mod-no-margin {
+    margin: 0; }
 
 .logo {
   height: 100px;
@@ -798,3 +800,40 @@ body {
   width: 0px;
   transition: 700ms;
   color: #000; }
+
+/**
+ * Module helper that loads all of the site specific modules.  This might be overkill, but in an attempt to keep things
+ * orderly, we will be separating out all of the modules in separate partials.
+ */
+/**
+ * Work History Items
+ *
+ * Each item in the work history is listed as an <li> within an ordered list.
+ *
+ * @markup
+   <li class="experience">
+     <!-- The inner article wrapper -->
+     <article className="experience-article">
+
+       <!-- Header is offset to the left with a time-line style connector -->
+       <header className="experience-header">
+         <h2 className="headline">{ item.name }</h2>
+         <h3 className="subheadline">{ item.title }</h3>
+       </header>
+
+       <!-- Body is to the right of the header section -->
+       <div className="experience-body">
+         <p className="mod-no-margin">{ item.summary }</p>
+       </div>
+
+     </article>
+   </li>
+ */
+.experiences {
+  position: relative; }
+
+.experience {
+  list-style-type: none;
+  position: relative; }
+  .experience-article {
+    display: flex; }

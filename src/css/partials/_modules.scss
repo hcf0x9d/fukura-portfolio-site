@@ -1,1 +1,8 @@
+/**
+ * Module helper that loads all of the site specific modules.  This might be overkill, but in an attempt to keep things
+ * orderly, we will be separating out all of the modules in separate partials.
+ */
+
+
 @import "gallery";
+@import "resume";

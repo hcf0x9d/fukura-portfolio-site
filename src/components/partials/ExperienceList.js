@@ -19,7 +19,7 @@ const ExperienceList = ( { work, } ) => {
             <h3>
                 Recent Experience
             </h3>
-            <ol>
+            <ol className="experiences">
                 { items }
             </ol>
         </section>

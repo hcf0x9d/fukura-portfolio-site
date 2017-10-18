@@ -24,4 +24,8 @@
 
 p {
   margin-top: 1em;
+
+  &.mod-no-margin {
+    margin: 0;
+  }
 }

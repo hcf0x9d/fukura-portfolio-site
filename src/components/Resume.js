@@ -26,12 +26,12 @@ class Resume extends Component {
 
         return (
             <article>
-                <section className="col-sm-6">
+                <section className="col-sm-8">
                     <header>
-                        <h1 className="pageTitle">
+                        <h1 className="type-title">
                             Curriculum Vitae
                         </h1>
-                        <h2>
+                        <h2 className="type-subtitle">
                             A developer with an eye for design.  Or a designer who likes to code. Either way.
                         </h2>
                     </header>
