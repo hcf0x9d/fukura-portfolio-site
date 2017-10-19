@@ -6,7 +6,8 @@ import Navigation from './components/partials/Navigation';
 import Home from './components/Home';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
-import PageShell from './components/Shell';
+import Project from './components/Project';
+import Contact from './components/Contact';
 
 class App extends Component {
     render() {
@@ -20,7 +21,10 @@ class App extends Component {
                 <main className="col-md-10 col-sm-9">
                     <Route exact path="/" component={ Home} />
                     <Route path="/resume" component={ Resume }/>
-                    <Route path="/portfolio" component={ Portfolio }/>
+                    <Route exact path="/portfolio" component={ Portfolio }>
+                        <Route path="/portfolio/:projectSlug" component={ Project } />
+                    </Route>
+                    <Route path="/contact" component={ Contact }/>
                 </main>
             </div>
         );

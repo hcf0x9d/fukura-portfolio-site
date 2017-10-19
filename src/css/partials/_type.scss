@@ -26,7 +26,11 @@
   }
 
   &-secondary {
+    font: normal 0.875em/1.28em $font-body;
 
+    &.mod-footer {
+      color: #999999;
+    }
   }
 
 }

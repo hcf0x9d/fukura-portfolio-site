@@ -1,29 +1,18 @@
 import React from 'react';
 
-const GalleryList =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ( { education, } ) => {
+import GalleryListItem from './GalleryListItem';
 
-    // const items = education.map( ( education ) => {
-    //
-    //     return (
-    //
-    //         <li key={ education.id } className="">
-    //             { education.name }
-    //         </li>
-    //
-    //     )
-    //
-    // } );
+const GalleryList = ( portfolio ) => {
 
-    return (
-        <section>
-            <h3 className="">
-                Languages
-            </h3>
-            <ol>
-                ITEMS
-            </ol>
-        </section>
-    )
+    const items = portfolio.portfolio.map( ( item ) => {
+
+        return (
+            <GalleryListItem key={ item.id } item={ item }/>
+        )
+
+    } );
+
+    return <ol class="gallery row">{ items }</ol>;
 
 };
 

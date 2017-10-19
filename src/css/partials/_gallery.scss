@@ -1,0 +1,56 @@
+/**
+ * Work History Items
+ *
+ * Each item in the work history is listed as an <li> within an ordered list.
+ *
+ * @markup
+   <li key={ item.name } className="col-sm-2 col-md-3">
+      <article className="card">
+        <div className="card-image" style={{ backgroundImage : 'url(' + item.keyImage + ')', }}>
+            <br/>
+        </div>
+
+        <div className="card-footer">
+          <h3 className="type-subheadline">{ item.projectName }</h3>
+
+          <li key={ skill.name } className="skill">
+              <img className="skill-icon" src={ skill.icon } alt={ skill.name }/>
+          </li>
+
+        </div>
+      </article>
+    </li>
+ */
+
+// List of experiences
+.gallery {
+  list-style-type: none;
+  margin-top: 2em;
+}
+
+.card {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 40px;
+  display: block;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  }
+
+  &-image  {
+
+  }
+
+  &-footer {
+    padding: 0.5em 1em;
+
+    & .skills .skill-icon {
+      width: 2em;
+    }
+  }
+}

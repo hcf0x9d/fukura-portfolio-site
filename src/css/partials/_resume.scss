@@ -28,7 +28,12 @@
   position: relative;
 
   &::before {
-    // Need al ine to connect the dots
+    content: "";
+    height: 100%;
+    border-left: 1px solid $color5;
+    position: absolute;
+    left: 0.5em;
+    top: 0.25em;
   }
 }
 
@@ -37,15 +42,29 @@
   position: relative;
   margin-top: 1em;
 
+  &:last-of-type .experience-article {
+    margin-bottom: 0;
+  }
+
   &-article {
     margin-bottom: 5em;
-    display: block;
+    display: inline-block;
   }
 
   &-header {
+    padding-left: 2em;
+    position: relative;
 
     &::before {
-      // The little dot and such
+      content: "";
+      width: 1em;
+      height: 1em;
+      top: 0.25em;
+      display: block;
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      background: $color5;
     }
   }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-const Home = () => {
+const Project = () => {
 
     return (
         <section>
@@ -54,4 +54,4 @@ const Home = () => {
 
 };
 
-export default Home;
+export default Project;

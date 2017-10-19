@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid $color5;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  margin-right: 1em;
+  margin-top: 1em;
+  color: $color5;
+  font: normal 1.25em/1.28em $font-title;
+  transition: all 0.25s ease;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: $color5;
+    color: $color0;
+  }
+}

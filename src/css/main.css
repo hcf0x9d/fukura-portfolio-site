@@ -709,6 +709,11 @@ img {
   .type-subheadline.mod-secondary {
     font-size: 0.875em; }
 
+.type-secondary {
+  font: normal 0.875em/1.28em "Cardo", serif; }
+  .type-secondary.mod-footer {
+    color: #999999; }
+
 p {
   margin-top: 1em; }
   p.mod-no-margin {
@@ -759,6 +764,25 @@ body {
 
 .full-height {
   min-height: 100vh; }
+
+.page-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: right; }
+
+.FadeIn-appear {
+  opacity: 0; }
+
+.FadeIn-appear.FadeIn-appear-active {
+  opacity: 1;
+  transition: all 0.25s linear; }
+
+.FadeIn-enter {
+  opacity: 0; }
+
+.FadeIn-enter.FadeIn-enter-active {
+  opacity: 1;
+  transition: all 0.2s linear 0.4s; }
 
 .SlideIn-appear {
   transform: translateY(15px);
@@ -820,6 +844,66 @@ body {
  * Module helper that loads all of the site specific modules.  This might be overkill, but in an attempt to keep things
  * orderly, we will be separating out all of the modules in separate partials.
  */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #92b4a7;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  margin-right: 1em;
+  margin-top: 1em;
+  color: #92b4a7;
+  font: normal 1.25em/1.28em "Pathway Gothic One", sans-serif;
+  transition: all 0.25s ease; }
+  .btn:last-of-type {
+    margin-right: 0; }
+  .btn:hover {
+    background: #92b4a7;
+    color: white; }
+
+/**
+ * Work History Items
+ *
+ * Each item in the work history is listed as an <li> within an ordered list.
+ *
+ * @markup
+   <li key={ item.name } className="col-sm-2 col-md-3">
+      <article className="card">
+        <div className="card-image" style={{ backgroundImage : 'url(' + item.keyImage + ')', }}>
+            <br/>
+        </div>
+
+        <div className="card-footer">
+          <h3 className="type-subheadline">{ item.projectName }</h3>
+
+          <li key={ skill.name } className="skill">
+              <img className="skill-icon" src={ skill.icon } alt={ skill.name }/>
+          </li>
+
+        </div>
+      </article>
+    </li>
+ */
+.gallery {
+  list-style-type: none;
+  margin-top: 2em; }
+
+.card {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 40px;
+  display: block;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease; }
+  .card:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); }
+  .card-footer {
+    padding: 0.5em 1em; }
+    .card-footer .skills .skill-icon {
+      width: 2em; }
+
 /**
  * Work History Items
  *
@@ -846,14 +930,36 @@ body {
  */
 .experiences {
   position: relative; }
+  .experiences::before {
+    content: "";
+    height: 100%;
+    border-left: 1px solid #92b4a7;
+    position: absolute;
+    left: 0.5em;
+    top: 0.25em; }
 
 .experience {
   list-style-type: none;
   position: relative;
   margin-top: 1em; }
+  .experience:last-of-type .experience-article {
+    margin-bottom: 0; }
   .experience-article {
     margin-bottom: 5em;
-    display: block; }
+    display: inline-block; }
+  .experience-header {
+    padding-left: 2em;
+    position: relative; }
+    .experience-header::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      top: 0.25em;
+      display: block;
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      background: #92b4a7; }
 
 /**
  * Education Section
@@ -917,6 +1023,12 @@ body {
     margin: 0; }
     .skills .skill-icon {
       width: 3em; }
+
+.cta-block {
+  padding: 5em 3em;
+  margin-top: 8em;
+  border-top: 1px dashed #bdc4a7;
+  text-align: center; }
 
 .page-article {
   margin-top: 2em; }

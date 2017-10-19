@@ -3,11 +3,12 @@
  * orderly, we will be separating out all of the modules in separate partials.
  */
 
-
+@import "inputs";
 @import "gallery";
 @import "resume";
 @import "resume_education";
 @import "resume_skills";
+@import "call_to_action";
 
 .page-article {
   margin-top: 2em;

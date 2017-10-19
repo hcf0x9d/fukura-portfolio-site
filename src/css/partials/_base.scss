@@ -20,8 +20,30 @@ body {
   min-height: 100vh;
 }
 
+.page-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: right;
+}
 
 // Boilerplate Crap
+.FadeIn-appear {
+  opacity: 0;
+}
+
+.FadeIn-appear.FadeIn-appear-active {
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+.FadeIn-enter {
+  opacity: 0;
+}
+.FadeIn-enter.FadeIn-enter-active {
+  opacity: 1;
+  transition: all 0.2s linear 0.4s;
+}
+
+
 
 .SlideIn-appear {
   transform: translateY(15px);
