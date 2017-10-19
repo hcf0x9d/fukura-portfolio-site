@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import PageFooter from './partials/Footer';
 
 const Home = () => {
 
@@ -45,10 +46,11 @@ const Home = () => {
                 transitionLeaveTimeout={200}
                 transitionName={'FadeIn'}
             >
-                <aside className="col-sm-8 aside-image">
+                <aside className="col-sm-8 aside-image hidden-sm">
                     <span className="image" style={{ backgroundImage : "url(http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg)", }}/>
                 </aside>
             </ReactCSSTransitionGroup>
+            <PageFooter/>
         </section>
     );
 

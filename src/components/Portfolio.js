@@ -16,7 +16,7 @@ class Portfolio extends Component {
 
         this.state = {
 
-            projects : JSON,
+            projects: JSON,
             ctaTitle   : "Looking for more projects?",
             ctaBody    : "To see more of my past work, contact me or check out my other portfolios.",
             ctaActions : [
@@ -29,9 +29,9 @@ class Portfolio extends Component {
                 },
                 {
 
-                    text   : "Contact me",
-                    url    : "contact",
-                    target : "_parent",
+                    text: "Visit GitHub",
+                    url: "https://www.github.com/jfukura",
+                    target: "_blank",
 
                 },
 
@@ -53,7 +53,7 @@ class Portfolio extends Component {
                         transitionLeaveTimeout={200}
                         transitionName={'SlideIn'}
                     >
-                        <section className="col-sm-8">
+                        <section className="col-sm-12">
                             <header>
                                 <h1 className="type-title">
                                     Portfolio
@@ -69,19 +69,7 @@ class Portfolio extends Component {
                             />
                         </section>
                     </ReactCSSTransitionGroup>
-                    <ReactCSSTransitionGroup
-                        transitionAppear={true}
-                        transitionAppearTimeout={600}
-                        transitionEnterTimeout={600}
-                        transitionLeaveTimeout={200}
-                        transitionName={'FadeIn'}
-                    >
 
-                        <section className="col-md-3 col-md-push-1">
-                            Other portfolio links
-                        </section>
-
-                    </ReactCSSTransitionGroup>
                 </article>
 
 

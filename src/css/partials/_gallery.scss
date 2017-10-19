@@ -31,19 +31,23 @@
 .card {
   position: relative;
   list-style-type: none;
+  color: $color4;
   padding: 0;
   border: 1px solid #CCCCCC;
   margin-bottom: 40px;
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
+  text-decoration: none;
 
   &:hover {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   }
 
   &-image  {
-
+    background-size: cover;
+    background-position: center center;
+    padding-top: 56.25% // 16:9 Aspect Ratio
   }
 
   &-footer {

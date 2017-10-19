@@ -5,7 +5,10 @@ const CallToAction = ( { title, body, actions, } ) => {
 
     const acts = actions.map( ( action ) => {
 
-        return <Link to={ action.url } className="btn" target={ action.target }>{ action.text }</Link>;
+        return <Link key={action.url}
+                     to={action.url}
+                     className="btn"
+                     target={action.target}>{action.text}</Link>;
 
     } );
 

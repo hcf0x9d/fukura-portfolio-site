@@ -22,8 +22,8 @@ class Resume extends Component {
             education  : JSON.education,
             skills     : JSON.skills,
             ctaTitle   : "Want more details?",
-            ctaBody    : "This resume is just a quick list, if you want more information download the PDF or contact " +
-                         "me and I can answer your questions.",
+            ctaBody: "This resume is just a quick list, if you want more information download the PDF or check " +
+            "out my LinkedIn profile.",
             ctaActions : [
                 {
 
@@ -34,11 +34,12 @@ class Resume extends Component {
                 },
                 {
 
-                    text   : "Contact me",
-                    url    : "contact",
-                    target : "_parent",
-                }
-            ]
+                    text: "View my LinkedIn",
+                    url: "https://www.linkedin.com/in/jfukura",
+                    target: "_blank",
+                },
+
+            ],
 
         }
 
@@ -95,7 +96,7 @@ class Resume extends Component {
                         transitionName={'FadeIn'}
                     >
 
-                        <section className="col-md-3 col-md-push-1">
+                        <section className="col-md-3 col-md-push-1 hidden-sm">
                             <EducationList education={ this.state.education } />
                             <SkillsList skills={ this.state.skills } />
                         </section>

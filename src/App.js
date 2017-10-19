@@ -17,14 +17,13 @@ class App extends Component {
                 <nav className="col-md-2 col-sm-3">
                     <img className="logo" src="/img/logo.svg" alt=""/>
                     <Navigation />
+                    <Contact/>
                 </nav>
                 <main className="col-md-10 col-sm-9">
                     <Route exact path="/" component={ Home} />
                     <Route path="/resume" component={ Resume }/>
-                    <Route exact path="/portfolio" component={ Portfolio }>
-                        <Route path="/portfolio/:projectSlug" component={ Project } />
-                    </Route>
-                    <Route path="/contact" component={ Contact }/>
+                    <Route exact path="/portfolio" component={Portfolio}/>
+                    <Route path="/portfolio/:projectSlug" component={Project}/>
                 </main>
             </div>
         );

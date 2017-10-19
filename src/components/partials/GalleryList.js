@@ -7,12 +7,12 @@ const GalleryList = ( portfolio ) => {
     const items = portfolio.portfolio.map( ( item ) => {
 
         return (
-            <GalleryListItem key={ item.id } item={ item }/>
+            <GalleryListItem item={item}/>
         )
 
     } );
 
-    return <ol class="gallery row">{ items }</ol>;
+    return <ol className="gallery row">{items}</ol>;
 
 };
 

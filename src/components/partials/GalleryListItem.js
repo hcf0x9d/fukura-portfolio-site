@@ -7,9 +7,9 @@ const GalleryListItem = ( { item, } ) => {
 
     return (
 
-        <li key={ item.name } className="col-sm-2 col-md-3 col-lg-4">
+        <li key={item.projectSlug} className="col-sm-2 col-md-3">
             <Link to={ item.projectSlug } className="card">
-                <div className="card-image" style={{ backgroundImage : 'url(' + item.keyImage + ')', }}>
+                <div className="card-image" style={{backgroundImage: item.images[0].src,}}>
                     <br/>
                 </div>
 

@@ -8,3 +8,16 @@
   }
 
 }
+
+.hidden-sm {
+  display: block !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-block {
+    padding: 5em 0;
+  }
+  .hidden-sm {
+    display: none;
+  }
+}

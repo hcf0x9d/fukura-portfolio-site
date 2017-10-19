@@ -43,3 +43,43 @@
   }
 
 }
+
+.contact-block {
+  margin-top: 5em;
+  display: block;
+}
+
+.block-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2;
+  color: $color4;
+
+  &:hover, :focus {
+    color: $color5;
+  }
+}
+
+.visible-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .visible-sm {
+    display: block;
+  }
+  .logo {
+    height: 60px;
+  }
+
+  .nav-item {
+    display: inline-block;
+    width: 33.33%;
+  }
+
+  .contact-block {
+    display: none !important;
+  }
+
+}

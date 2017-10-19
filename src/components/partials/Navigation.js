@@ -27,13 +27,6 @@ const Navigation = () => {
                     Portfolio
                 </NavLink>
             </li>
-            <li className="nav-item">
-                <NavLink to="/contact"
-                         className="nav-item-target"
-                         activeClassName="is-active">
-                    Contact
-                </NavLink>
-            </li>
         </ul>
 
     );
