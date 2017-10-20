@@ -22,7 +22,7 @@ class Resume extends Component {
             education  : JSON.education,
             skills     : JSON.skills,
             ctaTitle   : "Want more details?",
-            ctaBody: "This resume is just a quick list, if you want more information download the PDF or check " +
+            ctaBody    : "This resume is just a quick list, if you want more information download the PDF or check " +
             "out my LinkedIn profile.",
             ctaActions : [
                 {
@@ -34,9 +34,9 @@ class Resume extends Component {
                 },
                 {
 
-                    text: "View my LinkedIn",
-                    url: "https://www.linkedin.com/in/jfukura",
-                    target: "_blank",
+                    text   : "View my LinkedIn",
+                    url    : "https://www.linkedin.com/in/jfukura",
+                    target : "_blank",
                 },
 
             ],
@@ -55,8 +55,7 @@ class Resume extends Component {
                         transitionAppearTimeout={600}
                         transitionEnterTimeout={600}
                         transitionLeaveTimeout={200}
-                        transitionName={'SlideIn'}
-                    >
+                        transitionName={'SlideIn'}>
 
                         <section className="col-sm-8">
                                 <header>
@@ -64,19 +63,20 @@ class Resume extends Component {
                                         Curriculum Vitae
                                     </h1>
                                     <h2 className="type-subtitle">
-                                        A developer with an eye for design.  Or a designer who likes to code. Either way.
+                                        A developer with an eye for design.  Or a designer who likes to code. Either
+                                        way.
                                     </h2>
                                 </header>
                                 <p>
-                                    User Experience design from information architecture and requirements gathering through ISO
-                                    Standards annotated wireframes and user flows, to design and full-stack development (LAMP, WIMP,
-                                    etc).
+                                    User Experience design from information architecture and requirements gathering
+                                    through ISO Standards annotated wireframes and user flows, to design and full-stack
+                                    development (LAMP, WIMP, etc).
                                 </p>
                                 <p>
-                                    I work heavily in JavaScript and have designed and developed web applications with jQuery,
-                                    Angular and other frameworks. Web sites and web applications utilize SCSS built on OOCSS
-                                    standards, semantic, SEO and ADA friendly HTML5, object oriented JavaScript and PHP using the
-                                    MVC design pattern where possible.
+                                    I work heavily in JavaScript, and have designed and developed web applications with
+                                    jQuery, Angular and other frameworks. Web sites and web applications utilize SCSS
+                                    built on OOCSS standards, semantic, SEO- and ADA-friendly HTML5, object-oriented
+                                    JavaScript and PHP using the MVC design pattern when possible.
                                 </p>
 
                                 <ExperienceList work={ this.state.work } />
@@ -108,6 +108,6 @@ class Resume extends Component {
         );
 
     }
-};
+}
 
 export default Resume;

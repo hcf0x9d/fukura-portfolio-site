@@ -23,18 +23,19 @@ const Home = () => {
                         </h2>
                     </header>
                     <p>
-                        I am a true User Experience designer&mdash;I do more than just neat looking wireframes&mdash;and
-                        a web developer. Recently out of Udacity with my Web Developer certification to show that what I
-                        have been doing for years, now has an education to back it. Frameworks, libraries, test-driven,
-                        object oriented MV* code is what I love to work with, but I am no stranger to making pixel
-                        perfect designs in Fireworks, Sketch and Illustrator. I tend to stay away from Photoshop for web
-                        work, feel free to ask me why.
+                        I craft more than sleek-looking wireframes. I’m a true User Experience designer and web
+                        developer. Recently out of Udacity with my Web Developer certification to show that what I have
+                        been doing for years, now I have the education to back it up. I love working with Frameworks,
+                        libraries, test-driven and object-oriented MV* code, but I’m no stranger to making pixel-perfect
+                        designs in Fireworks, Sketch and Illustrator. I avoid using Photoshop for web work—ask me why.
                     </p>
                     <p>
-                        A coffee-addicted, scotch-snob father of three, there is little time in my day for things other
-                        than work and kids, but when I find those moments, I generally spend my time outside, working
-                        with wood, taking pictures or dealing with the other full-time job: my house. Thanks for taking
-                        a look, drop me a line at
+                        As a coffee-addicted, scotch-snob father of three, there’s little time in my day for things
+                        other than work and kids. But when I find those moments, I  them outside, working with wood,
+                        taking pictures or tending my other full-time job: my house.
+                    </p>
+                    <p>
+                        Thanks for taking a look, drop me a line at:
                         &nbsp;<a className="link" href="mailto:jason@jasonfukura.com">jason@jasonfukura.com</a>
                     </p>
                 </article>
@@ -47,7 +48,8 @@ const Home = () => {
                 transitionName={'FadeIn'}
             >
                 <aside className="col-sm-8 aside-image hidden-sm">
-                    <span className="image" style={{ backgroundImage : "url(http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg)", }}/>
+                    <span className="image" style={{ backgroundImage : "url(http://htmlcolorcodes.com/assets/images/" +
+                    "html-color-codes-color-tutorials-hero-00e10b1f.jpg)", }}/>
                 </aside>
             </ReactCSSTransitionGroup>
             <PageFooter/>
