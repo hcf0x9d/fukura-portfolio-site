@@ -29,6 +29,7 @@
     "gulp-cssmin": "^0.1.6",
     "gulp-imagemin": "^2.1.0",
     "gulp-sass": "^3.1.0",
+    "jscs": "^3.0.7",
     "run-sequence": "^1.2.2"
   }
 }
