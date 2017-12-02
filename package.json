@@ -25,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios": "^0.17.1",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.6",
     "gulp-imagemin": "^2.1.0",
