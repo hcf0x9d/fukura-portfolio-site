@@ -2,17 +2,20 @@ import React from 'react';
 
 import GalleryListItem from './GalleryListItem';
 
-const GalleryList = ( portfolio ) => {
+const GalleryList = ( props ) => {
 
-    const items = portfolio.portfolio.map( ( item ) => {
+    if ( props.portfolio ) {
 
-        return (
-            <GalleryListItem item={item}/>
-        )
+        const items = JSON.parse( props.portfolio ).projects.map(( item ) => {
 
-    } );
+            return (
+                <GalleryListItem key={ item.id } item={item}/>
+            )
 
-    return <ol className="gallery row">{items}</ol>;
+        });
+
+        return <ol className="gallery row">{items}</ol>;
+    }
 
 };
 

@@ -753,44 +753,31 @@ p {
           z-index: -1; }
 
 .contact-block {
-    margin-top: 5em;
-    display: block;
-}
+  margin-top: 5em;
+  display: block; }
 
 .block-link {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    line-height: 2;
-    color: #2f2f2f;
-}
-
-.block-link:hover, .block-link :focus {
-    color: #92b4a7;
-}
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2;
+  color: #2f2f2f; }
+  .block-link:hover, .block-link :focus {
+    color: #92b4a7; }
 
 .visible-sm {
-    display: none;
-}
+  display: none; }
 
 @media only screen and (max-width: 767px) {
-    .visible-sm {
-        display: block;
-    }
-
-    .logo {
-        height: 60px;
-    }
-
-    .nav-item {
-        display: inline-block;
-        width: 33.33%;
-    }
-
-    .contact-block {
-        display: none !important;
-    }
-}
+  .visible-sm {
+    display: block; }
+  .logo {
+    height: 60px; }
+  .nav-item {
+    display: inline-block;
+    width: 33.33%; }
+  .contact-block {
+    display: none !important; } }
 
 html {
   background: white;
@@ -902,12 +889,10 @@ body {
     color: white; }
 
 @media only screen and (max-width: 767px) {
-    .btn {
-        margin-right: 0;
-        display: block;
-        width: 100%;
-    }
-}
+  .btn {
+    margin-right: 0;
+    display: block;
+    width: 100%; } }
 
 /**
  * Work History Items
@@ -939,27 +924,29 @@ body {
 .card {
   position: relative;
   list-style-type: none;
-    color: #2f2f2f;
+  color: #2f2f2f;
   padding: 0;
   border: 1px solid #CCCCCC;
   margin-bottom: 40px;
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease;
-    text-decoration: none;
-}
+  transition: all 0.2s ease;
+  text-decoration: none; }
   .card:hover {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); }
-
-.card-image {
+  .card-image {
     background-size: cover;
     background-position: center center;
-    padding-top: 56.25%;
-}
+    padding-top: 80%; }
   .card-footer {
-    padding: 0.5em 1em; }
+    padding: 0.5em 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white; }
     .card-footer .skills .skill-icon {
-      width: 2em; }
+      width: 1.5em;
+      margin-right: 10px; }
 
 /**
  * Work History Items
@@ -1019,11 +1006,9 @@ body {
       background: #92b4a7; }
 
 @media only screen and (max-width: 767px) {
-    .experience-body {
-        padding-left: 2em;
-        margin-top: 2em;
-    }
-}
+  .experience-body {
+    padding-left: 2em;
+    margin-top: 2em; } }
 
 /**
  * Education Section
@@ -1095,18 +1080,13 @@ body {
   text-align: center; }
 
 .hidden-sm {
-    display: block !important;
-}
+  display: block !important; }
 
 @media only screen and (max-width: 767px) {
-    .cta-block {
-        padding: 5em 0;
-    }
-
-    .hidden-sm {
-        display: none;
-    }
-}
+  .cta-block {
+    padding: 5em 0; }
+  .hidden-sm {
+    display: none; } }
 
 .page-article {
   margin-top: 2em; }
@@ -1115,8 +1095,8 @@ body {
   width: 100%;
   height: 100vh;
   display: block;
-    position: fixed;
+  position: fixed;
   top: 0;
-    z-index: 1;
+  z-index: 1;
   background-size: cover;
   background-position: center center; }

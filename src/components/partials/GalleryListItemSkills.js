@@ -5,8 +5,12 @@ const GalleryListItemSkills = ( { skills, } ) => {
     const items = skills.map( ( skill ) => {
 
         return (
-            <li key={ skill.name } className="skill">
-                <img className="skill-icon" src={ skill.icon } alt={ skill.name }/>
+            <li key={ skill } className="skill">
+                <img className="skill-icon"
+                     src={ "/img/" + skill.replace(/[^a-zA-Z0-9]/g,'_') + ".svg"}
+                     alt={ skill }
+                     title={ skill }
+                />
             </li>
         )
 

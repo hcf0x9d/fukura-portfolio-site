@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-import JSON from '../portfolio.json';
-
 import GalleryList from './partials/GalleryList';
 import PageFooter from './partials/Footer';
 import CallToAction from './partials/CallToAction';
+import * as $ from "jquery";
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -15,8 +14,7 @@ class Portfolio extends Component {
         super( props );
 
         this.state = {
-
-            projects: JSON,
+            today      : new Date(),
             ctaTitle   : "Looking for more projects?",
             ctaBody    : "To see more of my past work, contact me or check out my other portfolios.",
             ctaActions : [
@@ -29,13 +27,62 @@ class Portfolio extends Component {
                 },
                 {
 
-                    text: "Visit GitHub",
-                    url: "https://www.github.com/jfukura",
-                    target: "_blank",
+                    text   : "Visit GitHub",
+                    url    : "https://www.github.com/jfukura",
+                    target : "_blank",
 
                 },
 
             ],
+
+        }
+
+    }
+
+    componentWillMount() {
+
+        let portfolioApi = () => {
+
+                const USER_ID = `jasonfukura`,
+                    API_KEY = `TI85bF0ji07ftRZFp8hJxLSUC8hzvo8q`,
+                    BEHANCE_URL = `https://api.behance.net/v2/users/${USER_ID}/projects?client_id=${API_KEY}`;
+
+                $.ajax( {
+                    url      : BEHANCE_URL,
+                    type     : "get",
+                    dataType : "jsonp",
+                } ).done( ( response ) => {
+
+                    this.setState( { projects : response.projects, projectCache : this.state.today, } );
+                    localStorage.setItem( 'projects', JSON.stringify( this.state ) );
+
+                } ).fail( ( error ) => {
+
+                    console.log( "Ajax request fails" )
+                    console.log( error );
+
+                } );
+
+            },
+
+            portfolioCache = () => {
+
+                this.setState( { projects : localStorage.getItem( 'projects' ), } );
+                console.log( 'projects set from the localStorage cache' );
+
+            }
+
+        // Check to see if the projects item exists in the localStorage.  If it does, read from the cache.
+        if ( localStorage.getItem( 'projects' ) &&
+            new Date(
+                JSON.parse( localStorage.getItem( 'projects' ) ).projectCache
+            ).getDate() === this.state.today.getDate() ) {
+
+            portfolioCache();
+
+        } else {
+
+            portfolioApi();
 
         }
 
