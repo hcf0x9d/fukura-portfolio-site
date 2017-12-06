@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, } from 'react-router-dom';
 
 // Import the views
 import Navigation from './components/partials/Navigation';
@@ -21,10 +21,12 @@ class App extends Component {
                     <Contact/>
                 </nav>
                 <main className="col-md-10 col-sm-9">
-                    <Route exact path="/" component={ Home} />
-                    <Route path="/resume" component={ Resume }/>
-                    <Route path="/portfolio" component={ Portfolio } />
-                    <Route exact path="/portfolio/:projectId" component={ Project } />
+                    <Switch>
+                        <Route exact path="/" component={ Home} />
+                        <Route path="/resume" component={ Resume }/>
+                        <Route exact path="/portfolio/:projectId" component={ Project } />
+                        <Route path="/portfolio" component={ Portfolio } />
+                    </Switch>
                 </main>
             </div>
         );
