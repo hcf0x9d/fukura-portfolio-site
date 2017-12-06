@@ -31,7 +31,7 @@ class Project extends Component {
                 } ).done( ( response ) => {
 
                     this.setState( { projects : response.projects, projectCache : this.state.today, } );
-                    localStorage.setItem( 'projects', JSON.stringify( this.state ) );
+                    // localStorage.setItem( 'projects', JSON.stringify( this.state ) );
 
                 } ).fail( ( error ) => {
 

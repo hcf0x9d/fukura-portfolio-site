@@ -18,13 +18,7 @@ class Portfolio extends Component {
             ctaTitle   : "Looking for more projects?",
             ctaBody    : "To see more of my past work, contact me or check out my other portfolios.",
             ctaActions : [
-                {
 
-                    text   : "Visit Behance",
-                    url    : "https://www.behance.net/jasonfukura",
-                    target : "_blank",
-
-                },
                 {
 
                     text   : "Visit GitHub",
@@ -67,7 +61,7 @@ class Portfolio extends Component {
 
             portfolioCache = () => {
 
-                this.setState( { projects : localStorage.getItem( 'projects' ), } );
+                this.setState( { projects : JSON.parse( localStorage.getItem( 'projects' ) ).projects, } );
                 console.log( 'projects set from the localStorage cache' );
 
             };
