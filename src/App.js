@@ -24,7 +24,7 @@ class App extends Component {
                     <Route exact path="/" component={ Home} />
                     <Route path="/resume" component={ Resume }/>
                     <Route exact path="/portfolio" component={ Portfolio } />
-                    <Route path="/portfolio/:projectSlug" component={ Project } />
+                    <Route path="/portfolio/:projectId" component={ Project } />
                 </main>
             </div>
         );

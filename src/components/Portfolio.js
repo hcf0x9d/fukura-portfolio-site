@@ -70,7 +70,7 @@ class Portfolio extends Component {
                 this.setState( { projects : localStorage.getItem( 'projects' ), } );
                 console.log( 'projects set from the localStorage cache' );
 
-            }
+            };
 
         // Check to see if the projects item exists in the localStorage.  If it does, read from the cache.
         if ( localStorage.getItem( 'projects' ) &&
