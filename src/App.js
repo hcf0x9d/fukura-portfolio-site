@@ -23,8 +23,8 @@ class App extends Component {
                 <main className="col-md-10 col-sm-9">
                     <Route exact path="/" component={ Home} />
                     <Route path="/resume" component={ Resume }/>
-                    <Route exact path="/portfolio" component={ Portfolio } />
-                    <Route path="/portfolio/:projectId" component={ Project } />
+                    <Route path="/portfolio" component={ Portfolio } />
+                    <Route exact path="/portfolio/:projectId" component={ Project } />
                 </main>
             </div>
         );
