@@ -1,6 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * Navigation Object
+ *
+ * Just the navigation elements within an unordered list.
+ *
+ * @returns {html}
+ * @constructor
+ */
+
 const Navigation = () => {
 
     return (

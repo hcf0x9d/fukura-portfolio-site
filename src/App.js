@@ -9,6 +9,9 @@ import Portfolio from './components/Portfolio';
 import Project from './components/Project';
 import Contact from './components/Contact';
 
+/**
+ * Base App Class
+ */
 class App extends Component {
 
     render() {

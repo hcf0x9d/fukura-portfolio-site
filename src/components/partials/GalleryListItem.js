@@ -20,7 +20,7 @@ const GalleryListItem = ( { project, } ) => {
         return (
 
             <li key={project.id} className="col-sm-2 col-md-3">
-                <a href={ project.url } className="card" target="_blank">
+                <a href={ '/portfolio/' + project.id } className="card">
                     <div className="card-image" style={ { backgroundImage : 'url(' + img.src + ')', } } >
                         <br/>
                     </div>

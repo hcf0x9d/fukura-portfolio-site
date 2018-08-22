@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import * as $ from "jquery";
@@ -14,15 +14,18 @@ class Project extends Component {
             projectId : props.match.params.projectId,
         }
 
+        console.log( this.state.projectId );
+
     }
 
+    // Before the component loads we need to gather the information for this project, either from the API or from the
+    // cached version of the project.  Cache right now is stored in localStorage with the projectId as the key.
     componentWillMount() {
 
-        let portfolioApi = () => {
+        let projectApi = () => {
 
-                const USER_ID = `jasonfukura`,
-                    API_KEY = `TI85bF0ji07ftRZFp8hJxLSUC8hzvo8q`,
-                    BEHANCE_URL = `https://api.behance.net/v2/users/${USER_ID}/projects?client_id=${API_KEY}`;
+                const API_KEY = `TI85bF0ji07ftRZFp8hJxLSUC8hzvo8q`,
+                    BEHANCE_URL = `https://api.behance.net/v2/projects/${ this.state.projectId }?client_id=${API_KEY}`;
 
                 $.ajax( {
                     url      : BEHANCE_URL,
@@ -30,36 +33,38 @@ class Project extends Component {
                     dataType : "jsonp",
                 } ).done( ( response ) => {
 
-                    this.setState( { projects : response.projects, projectCache : this.state.today, } );
-                    // localStorage.setItem( 'projects', JSON.stringify( this.state ) );
+                    this.setState( { current_project : response, } );
+                    localStorage.setItem( this.state.projectId, JSON.stringify( this.state.current_project ) );
 
                 } ).fail( ( error ) => {
 
-                    console.log( "Ajax request fails" )
+                    console.log( "Ajax request fails" );
                     console.log( error );
 
                 } );
 
             },
 
-            portfolioCache = () => {
+            projectCache = () => {
 
-                this.setState( { projects : localStorage.getItem( 'projects' ), } );
-                console.log( 'projects set from the localStorage cache' );
+                this.setState( { current_project : localStorage.getItem( this.state.projectId ), } );
+                console.log( 'DEBUG :: Project set from the localStorage cache' );
 
-            }
+            };
 
-        // Check to see if the projects item exists in the localStorage.  If it does, read from the cache.
-        if ( localStorage.getItem( 'projects' ) &&
+        // Check to see if the project item exists in the localStorage.  If it does, read from the cache.
+        if ( localStorage.getItem( this.state.projectId ) &&
             new Date(
                 JSON.parse( localStorage.getItem( 'projects' ) ).projectCache
             ).getDate() === this.state.today.getDate() ) {
 
-            portfolioCache();
+            console.log( 'DEBUG :: Retrieve the project from the cache' );
+            projectCache();
 
         } else {
 
-            portfolioApi();
+            projectApi();
+            console.log( 'DEBUG :: Get the project from the Behance API' );
 
         }
 
@@ -67,22 +72,14 @@ class Project extends Component {
 
     render() {
 
-        if ( this.state.projects ) {
+        let project = {};
 
-            const list = JSON.parse( this.state.projects ),
-                project = list.projects.map( ( item ) => {
+        // Once we have the projectId we know the AJAX request finished, so we can continue.
+        if ( this.state.current_project ) {
 
-                if ( String( item.id ) === this.state.projectId ) {
-
-                    console.log( item )
-
-                }
-
-            } );
+            project = this.state.current_project;
 
         }
-
-        let i = 0;
 
         return (
             <section>
@@ -94,6 +91,7 @@ class Project extends Component {
                     transitionName={'SlideIn'}>
 
                     <article className="col-sm-4 page-article">
+                        { project.id }
                         {/*<header>*/}
                             {/*<h1 className="type-title">*/}
                                 {/*{this.state.project.projectName}*/}

@@ -2,6 +2,14 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PageFooter from './partials/Footer';
 
+/**
+ * Home View
+ *
+ * The first view the user will encounter.  Includes no sub-view parts.
+ *
+ * @returns {html}
+ * @constructor
+ */
 const Home = () => {
 
     return (
@@ -31,7 +39,7 @@ const Home = () => {
                     </p>
                     <p>
                         As a coffee-addicted, scotch-snob father of three, there’s little time in my day for things
-                        other than work and kids. But when I find those moments, I  them outside, working with wood,
+                        other than work and kids. But when I find those moments, I like them outside, working with wood,
                         taking pictures or tending my other full-time job: my house.
                     </p>
                     <p>

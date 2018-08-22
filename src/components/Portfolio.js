@@ -52,7 +52,7 @@ class Portfolio extends Component {
 
                 } ).fail( ( error ) => {
 
-                    console.log( "Ajax request fails" )
+                    console.log( "DEBUG :: AJAX request failed" );
                     console.log( error );
 
                 } );
@@ -62,7 +62,7 @@ class Portfolio extends Component {
             portfolioCache = () => {
 
                 this.setState( { projects : JSON.parse( localStorage.getItem( 'projects' ) ).projects, } );
-                console.log( 'projects set from the localStorage cache' );
+                console.log( 'DEBUG :: Projects set from the localStorage cache' );
 
             };
 
